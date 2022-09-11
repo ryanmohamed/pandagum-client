@@ -1,14 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 
+import { AuthProvider } from './context/AuthProvider';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import Game from './pages/Game'
+import Login from './pages/Login/Login'
+
+import RequireAuth from './comp/RequireAuth/RequireAuth';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  
   <React.StrictMode>
-    <App />
+  <AuthProvider> { /* provide context to entire app */ }
+  <BrowserRouter>
+    <Routes>
+
+      { /* public routes */}
+      <Route path="/login" element={<Login />} />
+      
+      <Route element={<RequireAuth />}>
+
+        <Route path="/" element={<App />} />
+
+      </Route>
+
+    </Routes>
+  </BrowserRouter>
+  </AuthProvider> { /* provide context to entire app */ }
   </React.StrictMode>
 );
 

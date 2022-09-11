@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Shadows+Into+Light&display=swap');
+
+.Login {
+    position: relative;
+    display: block;
+
+    min-height: 100vh;
+    width: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 5vh 10vw;
+}
+
+.Logo {
+    position: absolute;
+    max-width: 10vw;
+    height: auto;
+
+    top: 40px;
+    left: 40px;
+
+    cursor: pointer;
+    animation: spin 4s infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(-45deg);
+    }
+    50% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(-45deg);
+    }
+}
+
+.Title {
+    width: 80%;
+    color: #FFF8F0;
+    text-shadow: 0.05em 0.05em 0.2em #35FF69;
+
+    user-select: none;
+    position: inline;
+
+    /* position: absolute;
+    top: calc(12.5% + calc(70px / 2));
+    left: 50%;
+    transform: translateX(-50%); */
+
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 50px;
+    line-height: 50px;
+    text-align: center;
+
+    margin: 0 50px;
+}
+
+.Divider {
+    height: 42vh;
+    width: 5px;
+    background-color: rgba(60, 60, 60, 0.2);
+    border-radius: 8px;
+    margin: 0 0;
+}
+
+@media only screen and (max-width: 828px) {
+    .Login {
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    .Title {
+        font-size: 2rem;
+        margin-bottom: 50px;
+    }
+    .Divider {
+        height: 5px;
+        width: 400px;
+    }
+}
