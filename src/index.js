@@ -12,26 +12,29 @@ import Game from './pages/Game'
 import Login from './pages/Login/Login'
 
 import RequireAuth from './comp/RequireAuth/RequireAuth';
+import { SocketProvider } from './context/SocketProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   
   <React.StrictMode>
   <AuthProvider> { /* provide context to entire app */ }
-  <BrowserRouter>
-    <Routes>
+    <SocketProvider>
+    <BrowserRouter>
+      <Routes>
 
-      { /* public routes */}
-      <Route path="/login" element={<Login />} />
-      
-      <Route element={<RequireAuth />}>
+        { /* public routes */}
+        <Route path="/login" element={<Login />} />
+        
+        <Route element={<RequireAuth />}>
 
-        <Route path="/" element={<App />} />
+          <Route path="/" element={<App />} />
 
-      </Route>
+        </Route>
 
-    </Routes>
-  </BrowserRouter>
+      </Routes>
+    </BrowserRouter>
+    </SocketProvider>
   </AuthProvider> { /* provide context to entire app */ }
   </React.StrictMode>
 );

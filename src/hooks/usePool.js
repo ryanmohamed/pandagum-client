@@ -1,18 +1,10 @@
-import axios from "axios"
-import { useState } from "react"
+/* eliminates the need for 3 statements in each file */
+
+import { useContext } from 'react'
+import PoolContext from '../context/PoolProvider'
 
 const usePool = () => {
-
-    const [connection, setConnection] = useState(false)
-
-    const connectToPool = async () => {
-        const response = await axios.get('http://localhost:3001/pool/', {
-            withCredentials: true /* allows us to send cookies */
-        })
-        console.log(response.data)
-    }
-
-    return connection
+    return useContext(PoolContext)
 }
 
 export default usePool

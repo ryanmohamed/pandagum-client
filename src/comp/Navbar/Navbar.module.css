@@ -6,6 +6,8 @@
     background-color: #020100;
     padding: 0 2.5vw;
 
+    position: absolute;
+    top: 0;
     display: flex;
     flex-direction: row;
     align-items: center;

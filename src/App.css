@@ -4,6 +4,102 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   background-color: #1b1d21;
+}
+
+.Container {
+  margin-top: var(--navheight);
+  height: calc(100vh - var(--navheight));
+
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(5, 1fr);
+
+}
+
+.Socket {
+  display: inline-block;
+  background-color: red;
+  grid-column: 1/2;
+  grid-row: 3/6;
+}
+
+.Play {
+  padding: 5%;
+  height: 100%;
+  grid-column: 2/3;
+  grid-row: 5/6;
+  background-color: darkred;
+}
+.Play > button:hover{
+  filter: brightness(1.2) saturate(1.6);
+  background-color: #ff3730;
+}
+.Play > button {
+  transition-duration: 175ms;
+  background-color: rgb(103, 236, 51);
+  border-radius: 0px;
+  height: 100%;
+  width: 100%;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  letter-spacing: 2px;
+  font-size: 42px;
+  font-weight: 200;
+  color: rgb(55, 0, 91);
+}
+
+.Players {
+  display: inline-block;
+  height: 100%;
+  grid-column: 2/3;
+  grid-row: 1/5;
+  background-color: rgb(98, 19, 234);
+
+  padding: 10%;
+}
+.Players > h2 {
+  text-align: center;
+  font-family: geneva;
+  font-weight: 300;
+  color: aliceblue;
+  margin-bottom: 20px;
+}
+.Players > ul {
+  list-style-type: none
+}
+.Players > ul > li {
+  height: 50px;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background-color: rgb(179, 0, 255);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: aliceblue;
+  line-height: 30px;
+  font-size: 30px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-shadow: 0 4px 5px rgba(43, 43, 43, 0.5);
+
+  transition: 250ms;
+}
+.Players > ul > li:hover {
+  scale: 1.1;
+  cursor: pointer;
+}
+
+
+.GameMode {
+  display: inline-block;
+  height: 100%;
+  grid-column: 1/2;
+  grid-row: 1/3;
+  background-color: rgb(35, 60, 158);
+
+  
 }
