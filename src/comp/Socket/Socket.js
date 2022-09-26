@@ -22,7 +22,7 @@ function Socket({ mutator }) {
 
       //we use our axios instance to privately supply our accessToken
       //we can also see our axiosInterceptors adequately handle whenever our accessToken expires
-      axiosPrivate.get('http://localhost:4000/pool', {
+      await axiosPrivate.get('http://localhost:4000/pool', {
         signal: controller.signal
       })
       .then(res => {
@@ -35,8 +35,12 @@ function Socket({ mutator }) {
           socket.emit('name', username)
         })
 
-        socket.on('pool', (list) => {
+        socket.on('userlist', (list) => {
           mutator(list)
+        })
+
+        socket.on('pairup', (payload) => {
+          console.log(payload)
         })
         
         socket.on('disconnect', () => {
