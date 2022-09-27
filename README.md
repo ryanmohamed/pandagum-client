@@ -24,8 +24,22 @@ First, the server receives those keywords and uses AI to generate images and sen
 </p>
 
 ### Development log
-- 09/26/22 Discussion of UI, To-Do list
-Dev Tool: [LINK](https://www.figma.com/file/rLMptvCx0YtM4eBay3rlOd/Pet-Macher?node-id=0%3A1)
+#### Dev Tool: 
+[Figma](https://www.figma.com/file/rLMptvCx0YtM4eBay3rlOd/Pet-Macher?node-id=0%3A1) <br>
+[Google Doc](https://docs.google.com/document/d/1U14JEcod-fgxBs9LmPyAGW13kzOjF1zWTjUbtuP-M8w/edit) <br>
+
+#### Index of Meetings
+[09/26/22 Meeting](#09/26/22-Meeting)
+
+#### Dissussions
+##### 09/26/22 Meeting
+- Topic: Discussion of UI, To-Do list
 <p align="left">
 <img src="https://github.com/ryanmohamed/pandagum-client/blob/main/dev%20log/Pet%20Macher.jpg?raw=true", width="50%">
+</p>
+
+##### 10/01/22 Meeting
+- Topic: TBD
+<p align="left">
+TBD...
 </p>
