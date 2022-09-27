@@ -29,17 +29,17 @@ First, the server receives those keywords and uses AI to generate images and sen
 - [Google Doc](https://docs.google.com/document/d/1U14JEcod-fgxBs9LmPyAGW13kzOjF1zWTjUbtuP-M8w/edit)
 
 #### Index of Meetings
-- [09/26/22-Meeting](#09/26/22-Meeting)
-- [10/01/22-Meeting](#10/01/22-Meeting)
+- [09/26/22 Meeting](#09/26/22-Meeting)
+- [10/01/22 Meeting](#10/01/22-Meeting)
 
 #### Dissussions
-##### 09/26/22-Meeting
+#### 09/26/22 Meeting
 - Topic: Discussion of UI, To-Do list
 <p align="left">
 <img src="https://github.com/ryanmohamed/pandagum-client/blob/main/dev%20log/Pet%20Macher.jpg?raw=true", width="50%">
 </p>
 
-##### 10/01/22-Meeting
+#### 10/01/22 Meeting
 - Topic: TBD
 <p align="left">
 TBD...
