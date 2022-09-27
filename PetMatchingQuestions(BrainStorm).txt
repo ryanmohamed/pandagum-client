@@ -1,0 +1,91 @@
+Pet Matching Questions (BrainStorming)
+
+1. How much money are you willing to spend for a pet?
+	A. 0 - 100 U.S. dollars 
+	B. 100 - 200 U.S. dollars 
+	C. 200 - 500 U.S. dollars 
+	D. 500 - 1000 U.S. dollars 
+
+2. How much time will you devote to your pet in a random day?
+	A. 1-2 hours 
+	B. 2-4 hours
+	C. 4-8 hours
+	D. More than 8 hours 
+
+3. What's your home like?
+	A. Messy
+	B. Organized and Clean 
+	C. Plenty of Space (have a backyard) 
+	D. Limited in Space
+
+4. How much training are you willing to do for your pet?
+	A. I want a pet that doesn't require training
+	B. A little bit, I want my pet to know the basics 
+	C. I am not against training but wasn't planning on it 
+	D. As long as it takes, my pet is my prince (male) or princess (female) 
+
+5. What's your favorite animal movie?
+	A. Finding Memo
+	B. Marley and Me 
+	C. Hotel for Dogs 
+	D. Kitty Love: An Homage to Cats
+
+6. How much cleaning and maintence are you willing to do? 
+	A. As long as most of the pet mess is in a specific area, I am fine
+	B. I have the absolute tolerance for the mess my pet makes, I will clean and deal with it 
+	C. A few bathroom uses in my workspace are fine, but this can't become a habit for my pet
+	D. I willing to do no cleaning or maintence for my pet. 
+
+7. Do you like a pet that sheds?
+	A. Love it 
+	B. Hate it
+	C. Don't mind it 
+	D. I don't care 
+
+8. What type of pet do you want to have (age)?
+	A. old
+	B. young
+	C. toddler (baby)
+	D. Don't care about the age 
+
+9. Where will your pet be sheltered?
+	A. Backyard
+	B. House
+	C. Apartment
+	D. My pet won't live with me but with someone I know 
+
+10. Do you want a pet that can sleep all day?
+	A. Yes, less work for me
+	B. No, I want to spend time with my pet
+	C. Yes, as long as I get time to spend with my pet
+	D. No, I spend a lot of money for a reason 
+
+11. Do you want a pet that can sense things that you can't such as detect whether a person has a disease and whether there is a natural disaster around them? 
+	A. Yes, this is cool
+	B. No, this is creepy
+	C. Yes, this can help me 
+	D. No, my pet shouldn't be this great 
+
+12. Do you want a pet that can understand English but may not want to speak in English?
+	A. Yes, it will be nice to speak to a pet 
+	B. Yes, it makes training the pet a whole lot easier 
+	C. No, my pet shouldn't know what I am saying
+	D. No, what's the point of understanding if you won't speak
+
+13. Do you want a pet that will be in a cage at it's home?
+	A. Yes, it will allow me to multitask
+	B. Yes, less work for me
+	C. No, my pet should be free and roaming around
+	D. No, the pet I want is huge and it can't be in a cage
+
+14. Are you or your family members allergic to any of the following allergies? 
+	A. Dust
+	B. Pollen 
+	C. Dander
+	D. None of the above 
+
+15. Why do want to have a pet?
+	A. My spouse and I are unable to have a child, this pet can be like a child to us
+	B. I want a perfect roomate, having a fun and good listener
+	C. I'd like to come home after work or school to have my free time with it
+	D. I am looking for a BFF to have adventures outdoors with, such as a picnic or movie nights. 
