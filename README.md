@@ -8,7 +8,7 @@ front end, securely handles client side tokens (jwt)
 ### Developers/Group Members:    
 - Parabjot Chander     
 - Ryan Mohamed        
-- Ching Kung Lin       
+- [Ching Kung Lin](https://github.com/sheisol310)       
 
 ### Programming Language: [ React.js / HTML, CSS, Js   ][  Node.js (Express & Socket.io) ]
 
