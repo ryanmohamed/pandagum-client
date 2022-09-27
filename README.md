@@ -6,8 +6,8 @@ front end, securely handles client side tokens (jwt)
 
 ### Project Title: Two Player Keyword Pet Matching Generator 
 ### Developers/Group Members:    
-- Parabjot Chander     
-- Ryan Mohamed        
+- [Parabjot Chander](https://github.com/ParabjotChander)
+- [Ryan Mohamed](https://github.com/ryanmohamed)        
 - [Ching Kung Lin](https://github.com/sheisol310)       
 
 ### Programming Language: [ React.js / HTML, CSS, Js   ][  Node.js (Express & Socket.io) ]
