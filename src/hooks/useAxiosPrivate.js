@@ -15,6 +15,8 @@ const useAxiosPrivate = () => {
 
     useEffect(() => {
 
+        console.log(auth)
+
         const requestIntercept = axiosPrivate.interceptors.request.use(
             config => {
                 if(!config.headers['authorization']){

@@ -8,16 +8,14 @@ import reportWebVitals from './reportWebVitals';
 import { AuthProvider } from './context/AuthProvider';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Game from './pages/Game'
 import Login from './pages/Login/Login'
 
 import RequireAuth from './comp/RequireAuth/RequireAuth';
-import { SocketProvider } from './context/SocketProvider';
+import { SocketProvider } from './context/Socket';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   
-  <React.StrictMode>
   <AuthProvider> { /* provide context to entire app */ }
     <SocketProvider>
     <BrowserRouter>
@@ -28,15 +26,17 @@ root.render(
         
         <Route element={<RequireAuth />}>
 
-          <Route path="/" element={<App />} />
+          <Route path="/" element={<App />}> 
+          
+          </Route>
 
         </Route>
 
       </Routes>
     </BrowserRouter>
     </SocketProvider>
-  </AuthProvider> { /* provide context to entire app */ }
-  </React.StrictMode>
+  </AuthProvider> 
+ 
 );
 
 // If you want your app to work offline and load faster, you can change

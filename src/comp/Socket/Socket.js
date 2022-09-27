@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import useAxiosPrivate from '../../hooks/useAxiosPrivate'
 import io from 'socket.io-client'
 
-import useSocket from '../../hooks/useSocket'
+import useSocketContext from '../../hooks/useSocketContext'
 
 function Socket({ mutator }) {
 
@@ -11,7 +11,7 @@ function Socket({ mutator }) {
   const axiosPrivate = useAxiosPrivate()
   const [connection, setConnection] = useState(false)
 
-  const { setSocket } = useSocket()
+  const { setSocket } = useSocketContext()
 
   useEffect(() => {
     //we want this boolean and controller to prevent multiple requests
@@ -35,9 +35,9 @@ function Socket({ mutator }) {
           socket.emit('name', username)
         })
 
-        socket.on('userlist', (list) => {
-          mutator(list)
-        })
+        // socket.on('userlist', (list) => {
+        //   mutator(list)
+        // })
 
         socket.on('pairup', (payload) => {
           console.log(payload)
