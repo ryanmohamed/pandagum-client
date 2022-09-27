@@ -9,9 +9,11 @@ import { AuthProvider } from './context/AuthProvider';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Login from './pages/Login/Login'
+import Room from './pages/Room/Room';
 
 import RequireAuth from './comp/RequireAuth/RequireAuth';
 import { SocketProvider } from './context/Socket';
+import RequireSocket from './comp/RequireSocket/RequireSocket';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -27,7 +29,13 @@ root.render(
         <Route element={<RequireAuth />}>
 
           <Route path="/" element={<App />}> 
-          
+
+            
+
+          </Route>
+
+          <Route element={<RequireSocket/>}>
+            <Route path="/room" element={<Room />} />
           </Route>
 
         </Route>

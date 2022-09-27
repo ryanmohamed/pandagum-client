@@ -4,13 +4,16 @@ import io from 'socket.io-client'
 import { useContext } from 'react'
 import AuthContext from '../context/AuthProvider'
 
-export const getSocket = (token) => {
+export const getSocket = (auth) => {
+
+    const token = auth?.accessToken
 
     if(token) {
         return io('http://localhost:4000/', {
-            query: token
+            auth: auth
         })
     }
+    
     return io('http://localhost:4000/')
 }
 

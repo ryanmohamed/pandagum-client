@@ -27,9 +27,10 @@ function LoginForm({}) {
       .then(res => {
 
         const accessToken = res?.data?.accessToken
-        const email = values.email
+        const email = res?.data?.user?.email
+        const username = res?.data?.user?.username
 
-        setAuth({ email, accessToken })
+        setAuth({ email, username, accessToken })
         setErrMsg('')
         navigate(from, { replace: true })
 

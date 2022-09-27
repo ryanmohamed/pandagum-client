@@ -8,17 +8,23 @@ import useAuth from './hooks/useAuth';
 import { getSocket } from './context/Socket';
 import useSocketContext from './hooks/useSocketContext'
 import { Navigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom'
+
 
 function App() {
 
   const { auth } = useAuth()
   const { setSocket } = useSocketContext()
 
-  useEffect(() => {
-    
-    setSocket(getSocket(auth?.accessToken))
+  const navigate = useNavigate()
+  const location = useLocation()
+  const from = location.state?.from?.pathname || '/'
 
-  }, [])
+  useEffect(() => {
+    const socket = getSocket(auth)
+    console.log(socket)
+    setSocket(socket)
+  }, [auth])
 
   return (
     <div className="App">
@@ -26,7 +32,10 @@ function App() {
       <Navbar />
 
       <main className='Container'>
-        <Navigate to="room"></Navigate>
+        <button onClick={(e) => {
+          e.preventDefault()
+          navigate('/room', { replace: true })
+        }}> Enter Room </button>
       </main>
 
     </div>
