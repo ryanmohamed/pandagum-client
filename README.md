@@ -30,6 +30,7 @@ First, the server receives those keywords and uses AI to generate images and sen
 
 #### Index of Meetings
 [09/26/22 Meeting](#09/26/22-Meeting)
+[10/01/22 Meeting](#10/01/22-Meeting)
 
 #### Dissussions
 ##### 09/26/22 Meeting
