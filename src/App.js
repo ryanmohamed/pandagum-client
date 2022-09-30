@@ -7,24 +7,43 @@ import useAuth from './hooks/useAuth';
 
 import { getSocket } from './context/Socket';
 import useSocketContext from './hooks/useSocketContext'
-import { Navigate } from 'react-router-dom';
-import { useNavigate, useLocation } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
+import Toggle from './comp/Toggle/Toggle';
 
 function App() {
 
   const { auth } = useAuth()
-  const { setSocket } = useSocketContext()
+  const { socket, setSocket } = useSocketContext()
+  const [ joinPool, setJoinPool ] = useState(null)
 
   const navigate = useNavigate()
-  const location = useLocation()
-  const from = location.state?.from?.pathname || '/'
 
   useEffect(() => {
-    const socket = getSocket(auth)
-    console.log(socket)
-    setSocket(socket)
-  }, [auth])
+    let s = getSocket(auth)
+    s.on('msg', msg => {
+      console.log(msg);
+    })
+    setSocket(s)
+  }, [])
+
+  useEffect(() => {
+
+    if(joinPool === true) {
+      console.log(joinPool)
+      socket.emit('join pool')
+    } 
+
+    else if(joinPool === false){
+      console.log(joinPool)
+      socket.emit('exit pool')
+    }
+
+  }, [joinPool])
+
+  const handleSwitch = (val) => {
+    setJoinPool(val)
+  }
 
   return (
     <div className="App">
@@ -32,10 +51,15 @@ function App() {
       <Navbar />
 
       <main className='Container'>
+
+
+        <Toggle returnStatus={handleSwitch}/>
+
         <button onClick={(e) => {
           e.preventDefault()
           navigate('/room', { replace: true })
         }}> Enter Room </button>
+
       </main>
 
     </div>
