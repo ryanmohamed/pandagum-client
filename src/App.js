@@ -20,12 +20,10 @@ function App() {
   const navigate = useNavigate()
 
   useEffect(() => {
+    console.log('hi');
     let s = getSocket(auth)
-    s.on('msg', msg => {
-      console.log(msg);
-    })
     setSocket(s)
-  }, [])
+  }, [auth])
 
   useEffect(() => {
 
@@ -51,9 +49,6 @@ function App() {
       <Navbar />
 
       <main className='Container'>
-
-
-        <Toggle returnStatus={handleSwitch}/>
 
         <button onClick={(e) => {
           e.preventDefault()

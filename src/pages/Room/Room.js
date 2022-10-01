@@ -19,7 +19,7 @@ function Room() {
         <button onClick={() => {
           console.log(socket.connected)
         }}> click me to check socket connection </button>
-      
+     
     </main>
   );
 
