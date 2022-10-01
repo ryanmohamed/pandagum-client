@@ -53,7 +53,7 @@ function App() {
 
       <div id="Rooms">
 
-        <p>Want to join a friend or loved one? Join a room.</p>
+        <p>Want to  join a friend or loved one? Join a room.</p>
         
         <div className="RoomForm" id="Create">
           <p>Create a room.</p>
