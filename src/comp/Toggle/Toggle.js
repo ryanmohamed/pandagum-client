@@ -1,17 +1,20 @@
 import React, { useState, useEffect } from "react";
 import styles from './Toggle.module.css'
 
-function Toggle({ returnStatus }){
+function Toggle({ children, returnStatus }){
 
     return <>
-    <label className={styles.Switch}>
-
-    <input onChange={(e) => {
-        returnStatus(e.target.checked)
-    }} className={styles.Input} type="checkbox" />
-    <span className={styles.Slider}></span>
     
-    </label>
+    <div className={styles.Toggle}>
+        <label className={styles.Switch}>
+            <input onChange={(e) => {
+                returnStatus(e.target.checked)
+            }} className={styles.Input} type="checkbox" />
+            <span className={styles.Slider}></span>
+        </label>
+        {children}
+    </div>
+
     </>
 }
 
