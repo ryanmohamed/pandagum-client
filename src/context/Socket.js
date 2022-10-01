@@ -9,19 +9,19 @@ export const getSocket = (auth) => {
     const token = auth?.accessToken
 
     if(token) {
-        return io('http://localhost:4000/', {
+        return io.connect('http://localhost:4000/', {
             auth: auth
         })
     }
     
-    return io('http://localhost:4000/')
+    return io.connect('http://localhost:4000/')
 }
 
 export const SocketContext  = createContext({})
 
 export const SocketProvider = ({ children }) => {
 
-    const [socket, setSocket] = useState({})
+    const [socket, setSocket] = useState(null)
 
     return (
         <SocketContext.Provider value={{ socket, setSocket }}>

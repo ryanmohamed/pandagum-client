@@ -72,7 +72,7 @@ function SignUpForm() {
                 <Field name="email" type="email" placeholder="Email" />
                 <ErrorMessage component={"span"} name="email" />
 
-                <Field name="password" type="password" placeholder="Password" />
+                <Field name="password" type="password" placeholder="Password" autoComplete="on"/>
                 <ErrorMessage component={"span"} name="password" />
 
                 { errMsg && <p className={styles.Error}>{ errMsg }</p>}
