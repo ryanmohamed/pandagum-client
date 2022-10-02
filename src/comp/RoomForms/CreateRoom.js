@@ -1,29 +1,42 @@
 import styles from "./RoomForm.module.css"
+import React, { useState, useEffect, useRef } from 'react';
 
-import React, { useState } from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
-import useAuth from "../../hooks/useAuth";
-
-import { useNavigate, useLocation } from 'react-router-dom'
-
+import { useNavigate } from 'react-router-dom'
 import useSocketContext from '../../hooks/useSocketContext'
 
 function CreateRoom({}) {
 
+  const fieldRef = useRef(null)
   const { socket } = useSocketContext()
   const navigate = useNavigate()
+  const [ feedback, setFeedback ] = useState(null)
+
+
+  useEffect(() => {
+
+    const clearForms = () => { fieldRef.current.value = '' }
+    socket?.on('left rooms', clearForms)
+    socket?.on('create error', (msg) => { setFeedback(msg) })
+    socket?.on('create success', (msg) => { setFeedback(msg)} )
+    socket?.on('join error', (msg) => { setFeedback(null) })
+    socket?.on('join success', (msg) => { setFeedback(null) })
+    socket?.on('entered pool', () => { setFeedback(null) })
+
+  }, [socket])
 
   const onSubmit = async (values) => {
 
     const roomId = values.RoomId
     const { id } = socket
 
-    console.log(`${id} entered ${roomId}`)
-    console.log('attempting to join room...')
+    setFeedback('')
+    values.RoomId = ''
+    console.log(`${id} attempting to join room ${roomId}`)
     await socket.emit('create room', { roomId: roomId })
-
+    
     //navigate('/room', { replace: true })
 
   }
@@ -44,10 +57,13 @@ function CreateRoom({}) {
           <h1> Create a Room </h1>
           <p> Enter a 4 digit room ID.</p>
 
-          <Field name="RoomId" type="text" placeholder="(e.g: 1234)" />
+          <Field innerRef={fieldRef} name="RoomId" type="text" placeholder="(e.g: 1234)" />
           <ErrorMessage component={"span"} name="RoomId" />
 
           <button type="submit"> Create and Join Room </button>
+
+          { feedback && <span>{feedback}</span> }
+
 
         </Form>
 

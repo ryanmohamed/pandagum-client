@@ -15,13 +15,14 @@ function Toggle({ children }){
     }, [toggle])
 
     useEffect(() => {
-        console.log(socket);
-        socket?.on('left pool', () => {
-            setToggle(false)
-        })
-        socket?.on('entered pool', () => {
-            setToggle(true)
-        })
+
+        socket?.on('left pool', () => { setToggle(false) })
+        socket?.on('entered pool', () => { setToggle(true) })
+        socket?.on('join success', () => { setToggle(false) })
+        socket?.on('create success', () => { setToggle(false) })
+        socket?.on('create error', () => { setToggle(false) })
+        socket?.on('join error', () => { setToggle(false) })
+    
     }, [socket])
 
     return <>
