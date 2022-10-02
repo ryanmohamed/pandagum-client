@@ -16,7 +16,6 @@ function SignUpForm() {
   const [ errMsg, setErrMsg ] = useState('')
 
   const navigate = useNavigate()
-  const location = useLocation()
 
   const onSubmit = async (values) => {
     
