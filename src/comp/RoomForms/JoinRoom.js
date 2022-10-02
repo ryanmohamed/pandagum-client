@@ -30,7 +30,6 @@ function JoinRoom({}) {
 
     const roomId = values.RoomId
     const { id } = socket
-    //hi
 
     values.RoomId = ''
     setFeedback('')
