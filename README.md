@@ -39,7 +39,7 @@ First, the server receives those keywords and uses AI to generate images and sen
 <img src="https://github.com/ryanmohamed/pandagum-client/blob/main/dev%20log/Pet%20Macher.jpg?raw=true", width="50%">
 </p>
 
-#### 100122 Meeting
+#### 100422 Meeting
 - Topic: TBD
 <p align="left">
 TBD...
