@@ -31,7 +31,7 @@ function SignUpForm() {
 
       setAuth({ email, username, accessToken })
       setErrMsg('')
-      navigate(from, { replace: true })
+      navigate('/', { replace: true })
 
     })
     .catch( err => {
