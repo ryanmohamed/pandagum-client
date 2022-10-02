@@ -1,34 +1,45 @@
 import React, { useState, useEffect } from "react";
 import styles from './Toggle.module.css'
 
-<<<<<<< HEAD
-function Toggle({ returnStatus }){
+import useSocketContext from "../../hooks/useSocketContext";
 
-    return <>
-    <label className={styles.Switch}>
 
-    <input onChange={(e) => {
-        returnStatus(e.target.checked)
-    }} className={styles.Input} type="checkbox" />
-    <span className={styles.Slider}></span>
+function Toggle({ children }){
+
+    const { socket } = useSocketContext()
+    const [ toggle, setToggle ] = useState(false)
     
-    </label>
-=======
-function Toggle({ children, returnStatus }){
+    useEffect(() => {
+        if(toggle === true) socket?.emit('join pool')
+        else socket?.emit('exit pool')
+    }, [toggle])
+
+    useEffect(() => {
+        console.log(socket);
+        socket?.on('left pool', () => {
+            setToggle(false)
+        })
+        socket?.on('entered pool', () => {
+            setToggle(true)
+        })
+    }, [socket])
 
     return <>
     
     <div className={styles.Toggle}>
         <label className={styles.Switch}>
             <input onChange={(e) => {
-                returnStatus(e.target.checked)
-            }} className={styles.Input} type="checkbox" />
+                setToggle(e.target.checked)
+            }} className={styles.Input} type="checkbox" checked={toggle} />
             <span className={styles.Slider}></span>
         </label>
-        {children}
+
+
+        <p>Turn {toggle ? 'off' : 'on'} random matchmaking?</p>
+
+
     </div>
 
->>>>>>> 01f1324049f6fab3d7e4d3cd44701aa7dc0d00b1
     </>
 }
 

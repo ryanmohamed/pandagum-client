@@ -13,35 +13,4 @@ html, body {
   height: calc(100vh - var(--navheight));
 }
 
-#Rooms {
-  background-color: green;
-  color: white;
-  width: 50%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.RoomForm {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.RoomForm > input {
-  height: 50px;
-  text-align: center;
-  font-size: 45px;
-  line-height: 50px;
-}
-
-.RoomForm > button {
-  border-radius: 8px;
-  background-color: rgb(57, 230, 57);
-  font-family: helvetica;
-  font-size: 24px;
-  margin-bottom: 15px;
-  height: 50px;
-}
 

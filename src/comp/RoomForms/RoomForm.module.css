@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400&family=Kanit:wght@200&family=Noto+Serif&family=Questrial&display=swap');
+#RoomFormContainer {
+    background-color: rgb(43, 28, 60);
+    width: 100%;
+}
+
+#RoomFormContainer > p {
+    color: rgb(232, 232, 232);
+
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    min-height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px 5vw;
+}
+
+#FormContainer {
+    background-color: green;
+    color: rgb(206, 206, 206);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#Create{
+    background-color: rgb(57, 144, 57);
+}
+
+#Join{
+    background-color: rgb(147, 91, 203);
+}
+  
+.RoomForm {
+    /* width: 100%; */
+    padding: 15px 50px 0 50px;
+}
+
+.RoomForm > * {
+    display: block;
+    font-family: 'Questrial', sans-serif;
+}
+
+.RoomForm > .Form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.RoomForm > .Form > h1, .RoomForm > .Form > p {
+    align-self: flex-start;
+    
+}
+
+.RoomForm > .Form > * {
+    margin-bottom: 15px;
+}
+  
+.RoomForm > .Form > input {
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+    font-size: 24px;
+}
+
+.RoomForm > .Form > input:-webkit-autofill, 
+.RoomForm > .Form > input:-webkit-autofill:hover,
+.RoomForm > .Form > input:-webkit-autofill:focus, 
+.RoomForm > .Form > input:-webkit-autofill:active { 
+    border: none;
+    font-size: 24px;
+    -webkit-box-shadow: none !important;
+    -webkit-text-fill-color: black !important;
+}
+
+
+.RoomForm > .Form > span {
+    text-align: center;
+    display: block;
+    font-size: 24px;
+}
+  
+.RoomForm > .Form > button {
+    color: white;
+    text-shadow: 0.1em 0.1em 0.2em rgba(66, 66, 66, 0.5);
+
+    border-radius: 8px;
+    background-color: rgb(57, 230, 57);
+    font-family: 'Kanit', sans-serif;
+    font-size: 24px;
+    /* margin-bottom: 15px; */
+    min-height: 50px;
+    height: fit-content;
+    width: 100%;
+}
+
+.RoomForm > .Form > button:hover {
+    filter: brightness(1.2);
+    text-shadow: 0.1em 0.1em 0.2em rgba(66, 66, 66, 1);
+}
+
+@media only screen and (max-width: 600px) {
+    #FormContainer {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+    }
+  }
