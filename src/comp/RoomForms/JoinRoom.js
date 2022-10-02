@@ -16,7 +16,6 @@ function JoinRoom({}) {
 
   useEffect(() => {
 
-    //hi
     const clearForms = () => { fieldRef.current.value = '' }
     socket?.on('left rooms', clearForms)
     socket?.on('join error', (msg) => { setFeedback(msg) })
@@ -31,6 +30,7 @@ function JoinRoom({}) {
 
     const roomId = values.RoomId
     const { id } = socket
+    const hi = "hello"
 
     values.RoomId = ''
     setFeedback('')
