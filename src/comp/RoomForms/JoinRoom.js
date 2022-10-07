@@ -19,25 +19,26 @@ function JoinRoom({}) {
     const clearForms = () => { fieldRef.current.value = '' }
     socket?.on('left rooms', clearForms)
     socket?.on('join error', (msg) => { setFeedback(msg) })
-    socket?.on('join success', (msg) => { setFeedback(msg)} )
     socket?.on('create error', (msg) => { setFeedback(null) })
     socket?.on('create success', (msg) => { setFeedback(null) })
     socket?.on('entered pool', () => { setFeedback(null) })
+
+    socket?.on('join success', (msg) => { 
+      setFeedback(msg)
+      navigate('/room', { replace: true })
+    })
 
   }, [socket])
 
   const onSubmit = async (values) => {
 
     const roomId = values.RoomId
-    const { id } = socket
-    const hi = "hello"
+    const id = socket?.id
 
     values.RoomId = ''
     setFeedback('')
     console.log(`${id} attempting to join ${roomId}`)
     await socket.emit('join room', { roomId: roomId })
-    
-    //navigate('/room', { replace: true })
 
   }
 
@@ -62,7 +63,7 @@ function JoinRoom({}) {
             name="RoomId" 
             type="text" 
             placeholder="(e.g: 1234)" 
-            />
+            /> 
           <ErrorMessage component={"span"} name="RoomId" />
 
           <button type="submit"> Join Room </button>

@@ -17,6 +17,14 @@ import RequireSocket from './comp/RequireSocket/RequireSocket';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+
+  /* 
+    <Route path="/" element={<Landing />}>
+    TO TEST YOUR FRONTEND BUILD 
+    COMMMENT OUT THE ENTIRE AUTHPROVIDER COMPONENT 
+    AND UNCOMMENT THE ABOVE, LET ME KNOW IF YOU ENCOUNTER
+    ISSUES 
+  */ 
   
   <AuthProvider> { /* provide context to entire app */ }
     <SocketProvider>

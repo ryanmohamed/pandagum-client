@@ -20,24 +20,26 @@ function CreateRoom({}) {
     const clearForms = () => { fieldRef.current.value = '' }
     socket?.on('left rooms', clearForms)
     socket?.on('create error', (msg) => { setFeedback(msg) })
-    socket?.on('create success', (msg) => { setFeedback(msg)} )
     socket?.on('join error', (msg) => { setFeedback(null) })
     socket?.on('join success', (msg) => { setFeedback(null) })
     socket?.on('entered pool', () => { setFeedback(null) })
+
+    socket?.on('create success', (msg) => { 
+      setFeedback(msg)
+      navigate('/room', { replace: true })
+    })
 
   }, [socket])
 
   const onSubmit = async (values) => {
 
     const roomId = values.RoomId
-    const { id } = socket
+    const id = socket?.id
 
     setFeedback('')
     values.RoomId = ''
     console.log(`${id} attempting to join room ${roomId}`)
     await socket.emit('create room', { roomId: roomId })
-    
-    //navigate('/room', { replace: true })
 
   }
 
