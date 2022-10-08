@@ -40,7 +40,8 @@ First, the server receives those keywords and uses AI to generate images and sen
 </p>
 
 #### 100422 Meeting
-- Topic: TBD
+- Topic: More details, ryan&parabjot displys chatroom functions, Gene displays homepage. 
 <p align="left">
-TBD...
+- [Front-end page display](https://recordit.co/6HyhG17xwj)
+- [chatroom functions display](https://recordit.co/CTO62VWJTc)
 </p>
