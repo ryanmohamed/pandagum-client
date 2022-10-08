@@ -1,0 +1,51 @@
+body {
+  scroll-behavior: smooth;
+}
+
+.layout-container {
+  display: grid;
+  grid-template-columns: auto 25%;
+  /*grid-template-columns: auto 300px;*/
+  grid-column-gap: 30px;
+}
+
+.layout-container {
+  display: flex;
+}
+main {
+  flex: 3;
+}
+
+.gaming_container {
+  background-color:aliceblue
+}
+
+.gaming_box {
+  margin:20px;
+  min-width: 80%;
+  min-height: 800px;
+	position:relative;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+aside {
+  flex: 1;
+}
+
+.chatroom_container {
+  
+}
+
+.chat_box {
+  margin:20px;
+  min-width: 20%;
+  min-height: 800px;
+	position:relative;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
