@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import useSocketContext from '../../hooks/useSocketContext';
 import useAuth from '../../hooks/useAuth'
+import useRoom from '../../hooks/useRoom';
 
 function Room() {
 
@@ -9,6 +10,8 @@ function Room() {
   const [ name, setName ] = useState(null)
   const [ ready, setReady ] = useState(false)
   const { auth } = useAuth()
+
+  const { room } = useRoom()
 
   useEffect(() => {
     
@@ -21,12 +24,12 @@ function Room() {
     socket?.on('room id', (id) => {
       setRoomId(id)
     })
-    socket?.on('ready', () => {
-      console.log('hi')
-      //setReady(true)
-    })
 
   }, [])
+
+  useEffect(() => {
+    setReady(room?.ready)
+  }, [ room ])
 
 
   return (
@@ -42,7 +45,9 @@ function Room() {
       }
 
       {
-        !ready ? <p style={{color: 'white', fontSize: '32px',}}>Give us a moment while someone connects...</p> : <span style={{color: 'white', fontSize: '32px',}}>Paired with user X!</span>
+        !ready ? <p style={{color: 'white', fontSize: '32px',}}>Give us a moment while someone connects...</p> : <span style={{color: 'white', fontSize: '32px',}}>Paired with user {
+          room?.user1?.username == auth?.username ? room?.user2?.username : room?.user1?.username
+        }!</span>
       } 
 
     </main>

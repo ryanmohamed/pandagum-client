@@ -12,10 +12,13 @@ import { useNavigate } from 'react-router-dom'
 import Toggle from './comp/Toggle/Toggle';
 import RoomForm from './comp/RoomForms/RoomForm';
 
+import useRoom from './hooks/useRoom';
+
 function App() {
 
   const { auth } = useAuth()
   const { setSocket } = useSocketContext()
+  const { setRoom } = useRoom()
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -23,6 +26,12 @@ function App() {
     s.on('msg', msg => {
       console.log(msg)
     })
+
+    s.on('room update', room => {
+      setRoom(room)
+      console.log(room)
+    })
+
     setSocket(s)
   }, [auth])
 

@@ -15,6 +15,8 @@ import RequireAuth from './comp/RequireAuth/RequireAuth';
 import { SocketProvider } from './context/Socket';
 import RequireSocket from './comp/RequireSocket/RequireSocket';
 
+import { RoomProvider } from './context/RoomProvider';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
@@ -28,6 +30,7 @@ root.render(
   
   <AuthProvider> { /* provide context to entire app */ }
     <SocketProvider>
+    <RoomProvider>
     <BrowserRouter>
       <Routes>
 
@@ -36,20 +39,18 @@ root.render(
         
         <Route element={<RequireAuth />}>
 
-          <Route path="/" element={<App />}> 
+          
+            <Route path="/" element={<App />}/>
 
-            
-
-          </Route>
-
-          <Route element={<RequireSocket/>}>
-            <Route path="/room" element={<Room />} />
-          </Route>
-
+            <Route element={<RequireSocket/>}>
+              <Route path="/room" element={<Room />} />
+            </Route>
+          
         </Route>
 
       </Routes>
     </BrowserRouter>
+    </RoomProvider>
     </SocketProvider>
   </AuthProvider> 
  
