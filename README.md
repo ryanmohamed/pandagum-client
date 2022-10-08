@@ -31,6 +31,7 @@ First, the server receives those keywords and uses AI to generate images and sen
 #### b. Index of Meetings
 - [09/26/22 Meeting](#092622-Meeting)
 - [10/04/22 Meeting](#100422-Meeting)
+- [10/12/22 Meeting](#101222-Meeting)
 
 #### c. Dissussions
 #### 092622 Meeting
@@ -43,3 +44,6 @@ First, the server receives those keywords and uses AI to generate images and sen
 - Topic: More details, ryan&parabjot displys chatroom functions, Gene displays homepage. 
   - [Front-end page display](https://recordit.co/6HyhG17xwj)
   - [chatroom functions display](https://recordit.co/CTO62VWJTc)
+
+#### 101222 Meeting
+- Topic: TBD. 
