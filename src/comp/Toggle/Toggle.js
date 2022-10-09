@@ -28,17 +28,13 @@ function Toggle({ children }){
     return <>
     
     <div className={styles.Toggle}>
+        <p>Turn {toggle ? 'off' : 'on'} random matchmaking?</p>
         <label className={styles.Switch}>
             <input onChange={(e) => {
                 setToggle(e.target.checked)
             }} className={styles.Input} type="checkbox" checked={toggle} />
             <span className={styles.Slider}></span>
         </label>
-
-
-        <p>Turn {toggle ? 'off' : 'on'} random matchmaking?</p>
-
-
     </div>
 
     </>

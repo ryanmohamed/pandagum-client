@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400&family=Kanit:wght@200&family=Noto+Serif&family=Questrial&display=swap');
 #RoomFormContainer {
-    background-color: rgb(43, 28, 60);
+    /* background-color: rgb(43, 28, 60); */
     width: 100%;
+    margin-top: 10px;
+
+    min-height: 50vh;
 }
 
 #RoomFormContainer > p {
-    color: rgb(232, 232, 232);
+    /* color: rgb(232, 232, 232); */
+    color: #212529;
 
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 40px;
@@ -16,23 +20,24 @@
     align-items: center;
     justify-content: center;
 
-    padding: 25px 5vw;
+    padding: 10px 5vw;
+    margin-bottom: 50px;
 }
 
 #FormContainer {
-    background-color: green;
-    color: rgb(206, 206, 206);
+    /* color: rgb(206, 206, 206); */
+    color: #212529;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
 #Create{
-    background-color: rgb(57, 144, 57);
+    /* background-color: rgba(57, 144, 57, 0.2); */
 }
 
 #Join{
-    background-color: rgb(147, 91, 203);
+    /* background-color: rgba(147, 91, 203, 0.2); */
 }
   
 .RoomForm {
@@ -91,7 +96,7 @@
     text-shadow: 0.1em 0.1em 0.2em rgba(66, 66, 66, 0.5);
 
     border-radius: 8px;
-    background-color: rgb(57, 230, 57);
+    background-color: #e43c5c;
     font-family: 'Kanit', sans-serif;
     font-size: 24px;
     /* margin-bottom: 15px; */

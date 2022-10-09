@@ -6,7 +6,9 @@ import JoinRoom from "./JoinRoom";
 
 function RoomForm(){
     return <>
-        <div id={styles['RoomFormContainer']}>
+        <div id={styles['RoomFormContainer']}
+             style={{ background: 'url("/img/app-hero.png") center center' }}
+        >
 
             <p>Want to  join a friend or loved one? Join a room.</p>
 
