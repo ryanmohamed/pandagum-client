@@ -25,7 +25,7 @@ Still connected, The two users can now simultaneously produce filter events like
 First, the server receives those keywords and uses AI to generate images and send them back to the users. To get a final pet that is generated for them.
 </p>
 
-### 6. Development log
+### Development log
 #### a. Dev Tool: 
 - [Figma](https://www.figma.com/file/rLMptvCx0YtM4eBay3rlOd/Pet-Macher?node-id=0%3A1)
 - [Google Doc](https://docs.google.com/document/d/1U14JEcod-fgxBs9LmPyAGW13kzOjF1zWTjUbtuP-M8w/edit)
