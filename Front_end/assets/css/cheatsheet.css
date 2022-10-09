@@ -1,0 +1,29 @@
+body {
+  scroll-behavior: smooth;
+}
+
+.layout-container {
+  display: grid;
+  grid-template-columns: auto 25%;
+  /*grid-template-columns: auto 300px;*/
+  grid-column-gap: 30px;
+}
+
+.layout-container {
+  display: flex;
+}
+main {
+  flex: 3;
+}
+
+.gaming_container {
+  background-color:aliceblue
+}
+
+aside {
+  flex: 1;
+}
+
+.chatroom_container {
+  background-color: aqua;
+}
