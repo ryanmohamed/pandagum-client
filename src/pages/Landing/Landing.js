@@ -23,7 +23,10 @@ function Landing() {
               <li><a className="nav-link scrollto active" href="#hero">Home</a></li>
               <li><a className="nav-link scrollto" href="#team">Team</a></li>
               <li><a className="nav-link scrollto" href="#contact">Contact</a></li>
-              <li><a className="nav-link scrollto" href="./pages/login.html">Login</a></li>
+              <li>
+                {/* react revision, explanation below */}
+                <Link className="nav-link scrollto" to="login">Login</Link>
+              </li>
 
 
             </ul>
