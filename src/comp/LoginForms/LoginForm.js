@@ -31,7 +31,7 @@ function LoginForm() {
         console.log(email, username)
         setAuth({ email, username, accessToken })
         setErrMsg('')
-        navigate('/', { replace: true })
+        navigate('/app', { replace: true })
 
       })
       .catch(err => {

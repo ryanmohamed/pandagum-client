@@ -30,29 +30,25 @@ root.render(
     <BrowserRouter>
       <Routes>
 
+        {/* COMMENT OUT RYAN ROUTE TESTING TO TEST YOUR BUILDS */}
+        {/* FRONT END DESIGN TESTING */}
+        {/* <Route path="/" element={<Landing />} /> */}
 
+        {/* RYAN ROUTE TESTING */} 
+        {/* public routes */}
         <Route path="/" element={<Landing />} />
-        { /* 
-          <Route path="/" element={<Landing />}>
-          TO TEST YOUR FRONTEND BUILD 
-          COMMMENT OUT EVERYTHING IN ROUTES 
-          AND UNCOMMENT THE ABOVE, LET ME KNOW IF YOU ENCOUNTER
-          ISSUES 
-        */ }
-
-        { /* public routes */}
-        {/* <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login />} />s
         
+        {/* authentication require routes */}
         <Route element={<RequireAuth />}>
 
-          
-            <Route path="/" element={<App />}/>
+            <Route path="/app" element={<App />}/>
 
             <Route element={<RequireSocket/>}>
               <Route path="/room" element={<Room />} />
             </Route>
           
-        </Route> */}
+        </Route>
 
       </Routes>
     </BrowserRouter>

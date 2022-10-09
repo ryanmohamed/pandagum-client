@@ -69,7 +69,7 @@ function Landing() {
 
               <div className="col-lg-6 pt-4 pt-lg-0 right_column">
                 <p>
-                  <strong>WHY PetMacher ? </strong>
+                  <strong>WHY PetMacher? </strong>
                 </p>
                 <ul>
                   <li><i className="ri-thumb-up-fill"></i> Gaming matching process makes a lot of fun.</li>
