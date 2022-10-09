@@ -79,7 +79,7 @@ function Landing() {
                 </ul>
 
                 { /* React REVISION (Ryan): React is usually used for single page web
-                     apps, when we're linking routes and want to maintain React structure
+                     apps, when we're linking routes in OUR domain and want to maintain React structure
                       we must use a package call react-router to handle it for us,
                       all possible routes exist in the BrowserRouter (index.js),
                       with the associated element rendered for each route.
