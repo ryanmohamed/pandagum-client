@@ -6,35 +6,16 @@ import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 import { Link } from 'react-router-dom'
 
+import Header from '../../comp/Header/Header';
+
 function Landing() {
 
   const { socket } = useSocketContext()
 
   return (
     <main id="Landing">
-      <header id="header" className="fixed-top">
-        <div className="container d-flex align-items-center justify-content-between">
 
-          <h1 className="logo"><a href="index.html">PetMacher</a></h1>
-
-
-          <nav id="navbar" className="navbar">
-            <ul>
-              <li><a className="nav-link scrollto active" href="#hero">Home</a></li>
-              <li><a className="nav-link scrollto" href="#team">Team</a></li>
-              <li><a className="nav-link scrollto" href="#contact">Contact</a></li>
-              <li>
-                {/* react revision, explanation below */}
-                <Link className="nav-link scrollto" to="login">Login</Link>
-              </li>
-
-
-            </ul>
-            <i className="bi bi-list mobile-nav-toggle"></i>
-          </nav>
-
-        </div>
-      </header>
+      <Header />
 
       <section id="hero"
         style={{ background: 'url("/img/two-corgis.jpeg") top center' }}>

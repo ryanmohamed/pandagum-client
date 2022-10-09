@@ -6,6 +6,8 @@ import useRoom from '../../hooks/useRoom';
 import Navbar from '../../comp/Navbar/Navbar'
 import styles from './Room.module.css'
 
+import Header from '../../comp/Header/Header'
+
 function Room() {
 
   const { socket } = useSocketContext()
@@ -37,7 +39,7 @@ function Room() {
 
   return (
     <>
-    <Navbar />
+    <Header /> 
     <main className={styles.Room}>
 
       {

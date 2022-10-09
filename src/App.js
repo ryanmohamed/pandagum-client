@@ -13,6 +13,8 @@ import RoomForm from './comp/RoomForms/RoomForm';
 
 import useRoom from './hooks/useRoom';
 
+import Header from './comp/Header/Header'
+
 function App() {
 
   const { auth } = useAuth()
@@ -36,7 +38,7 @@ function App() {
   return (
     <div className="App">
 
-      <Navbar />
+      <Header />
 
       <main className='Container'>
       
