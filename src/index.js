@@ -39,7 +39,7 @@ root.render(
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login />} />s
         
-        {/* authentication require routes */}
+        {/* authentication require  routes */}
         <Route element={<RequireAuth />}>
 
             <Route path="/app" element={<App />}/>
