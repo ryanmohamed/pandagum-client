@@ -4,6 +4,8 @@ front end, securely handles client side tokens (jwt)
 <img src="https://github.com/sheisol310/qcfirst/blob/4ed2508cc1d8aface0eac2f31f114a271ece767f/image%20for%20readMe/Queens%20college.png" width=50%>
 </p>
 
+#### [Go To Development Log](#Development-log)
+
 ### 1. Project Title: Two Player Keyword Pet Matching Generator 
 ### 2. Developers/Group Members:    
 - [Parabjot Chander](https://github.com/ParabjotChander)
@@ -23,14 +25,15 @@ Still connected, The two users can now simultaneously produce filter events like
 First, the server receives those keywords and uses AI to generate images and send them back to the users. To get a final pet that is generated for them.
 </p>
 
-### 6. Development log
+### Development log
 #### a. Dev Tool: 
 - [Figma](https://www.figma.com/file/rLMptvCx0YtM4eBay3rlOd/Pet-Macher?node-id=0%3A1)
 - [Google Doc](https://docs.google.com/document/d/1U14JEcod-fgxBs9LmPyAGW13kzOjF1zWTjUbtuP-M8w/edit)
 
 #### b. Index of Meetings
 - [09/26/22 Meeting](#092622-Meeting)
-- [10/01/22 Meeting](#100122-Meeting)
+- [10/04/22 Meeting](#100422-Meeting)
+- [10/12/22 Meeting](#101222-Meeting)
 
 #### c. Dissussions
 #### 092622 Meeting
@@ -40,7 +43,9 @@ First, the server receives those keywords and uses AI to generate images and sen
 </p>
 
 #### 100422 Meeting
-- Topic: TBD
-<p align="left">
-TBD...
-</p>
+- Topic: More details, ryan&parabjot displys chatroom functions, Gene displays homepage. 
+  - [Front-end page display](https://recordit.co/6HyhG17xwj)
+  - [chatroom functions display](https://recordit.co/CTO62VWJTc)
+
+#### 101222 Meeting
+- Topic: TBD. 
