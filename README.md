@@ -4,7 +4,7 @@ front end, securely handles client side tokens (jwt)
 <img src="https://github.com/sheisol310/qcfirst/blob/4ed2508cc1d8aface0eac2f31f114a271ece767f/image%20for%20readMe/Queens%20college.png" width=50%>
 </p>
 
-#### [Development Log](#6.-Development-log)
+#### [Development Log](#Development-log)
 
 ### 1. Project Title: Two Player Keyword Pet Matching Generator 
 ### 2. Developers/Group Members:    
