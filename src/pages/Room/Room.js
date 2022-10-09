@@ -3,6 +3,9 @@ import useSocketContext from '../../hooks/useSocketContext';
 import useAuth from '../../hooks/useAuth'
 import useRoom from '../../hooks/useRoom';
 
+import Navbar from '../../comp/Navbar/Navbar'
+import styles from './Room.module.css'
+
 function Room() {
 
   const { socket } = useSocketContext()
@@ -21,11 +24,11 @@ function Room() {
 
     socket && console.log(socket)
 
-    socket?.on('room id', (id) => {
+    socket && socket.on('room id', (id) => {
       setRoomId(id)
     })
 
-  }, [])
+  }, [auth, socket])
 
   useEffect(() => {
     setReady(room?.ready)
@@ -33,7 +36,9 @@ function Room() {
 
 
   return (
-    <main className='Room'>
+    <>
+    <Navbar />
+    <main className={styles.Room}>
 
       {
         name && <p style={{color: 'white', fontSize: '32px',}}>Welcome {name}!</p>
@@ -46,11 +51,12 @@ function Room() {
 
       {
         !ready ? <p style={{color: 'white', fontSize: '32px',}}>Give us a moment while someone connects...</p> : <span style={{color: 'white', fontSize: '32px',}}>Paired with user {
-          room?.user1?.username == auth?.username ? room?.user2?.username : room?.user1?.username
+          room?.user1?.username === auth?.username ? room?.user2?.username : room?.user1?.username
         }!</span>
       } 
 
     </main>
+    </>
   );
 
 

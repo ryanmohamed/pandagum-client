@@ -12,7 +12,7 @@ function Toggle({ children }){
     useEffect(() => {
         if(toggle === true) socket?.emit('join pool')
         else socket?.emit('exit pool')
-    }, [toggle])
+    }, [toggle, socket])
 
     useEffect(() => {
 

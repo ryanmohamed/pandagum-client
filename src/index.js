@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -17,22 +17,28 @@ import RequireSocket from './comp/RequireSocket/RequireSocket';
 
 import { RoomProvider } from './context/RoomProvider';
 
+import Landing from './pages/Landing/Landing';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
-  /* 
-    <Route path="/" element={<Landing />}>
-    TO TEST YOUR FRONTEND BUILD 
-    COMMMENT OUT THE ENTIRE AUTHPROVIDER COMPONENT 
-    AND UNCOMMENT THE ABOVE, LET ME KNOW IF YOU ENCOUNTER
-    ISSUES 
-  */ 
+
   
   <AuthProvider> { /* provide context to entire app */ }
     <SocketProvider>
     <RoomProvider>
     <BrowserRouter>
       <Routes>
+
+
+        {/* <Route path="/" element={<Landing />} /> */}
+        { /* 
+          <Route path="/" element={<Landing />}>
+          TO TEST YOUR FRONTEND BUILD 
+          COMMMENT OUT EVERYTHING IN ROUTES 
+          AND UNCOMMENT THE ABOVE, LET ME KNOW IF YOU ENCOUNTER
+          ISSUES 
+        */ }
 
         { /* public routes */}
         <Route path="/login" element={<Login />} />

@@ -7,15 +7,14 @@ import axios from 'axios';
 
 import useAuth from "../../hooks/useAuth";
 
-import { useNavigate, useLocation } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
-function LoginForm({}) {
+function LoginForm() {
 
   const { setAuth } = useAuth()
   const [errMsg, setErrMsg] = useState('')
 
   const navigate = useNavigate()
-  const location = useLocation()
 
   const onSubmit = async (values) => {
 
@@ -28,12 +27,6 @@ function LoginForm({}) {
         const accessToken = res?.data?.accessToken
         const email = res?.data?.user?.email
         const username = res?.data?.user?.username
-
-        const auth = {
-          email: email,
-          username: username,
-          accessToken: accessToken
-        }
 
         console.log(email, username)
         setAuth({ email, username, accessToken })

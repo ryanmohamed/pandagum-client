@@ -8,7 +8,7 @@ import axios from 'axios';
 
 import useAuth from "../../hooks/useAuth";
 
-import { useNavigate, useLocation } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 function SignUpForm() {
 

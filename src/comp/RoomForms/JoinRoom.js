@@ -7,7 +7,7 @@ import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom'
 import useSocketContext from "../../hooks/useSocketContext";
 
-function JoinRoom({}) {
+function JoinRoom() {
 
   const { socket } = useSocketContext()
   const navigate = useNavigate()
@@ -17,18 +17,18 @@ function JoinRoom({}) {
   useEffect(() => {
 
     const clearForms = () => { fieldRef.current.value = '' }
-    socket?.on('left rooms', clearForms)
-    socket?.on('join error', (msg) => { setFeedback(msg) })
-    socket?.on('create error', (msg) => { setFeedback(null) })
-    socket?.on('create success', (msg) => { setFeedback(null) })
-    socket?.on('entered pool', () => { setFeedback(null) })
+    socket && socket.on('left rooms', clearForms)
+    socket && socket.on('join error', (msg) => { setFeedback(msg) })
+    socket && socket.on('create error', (msg) => { setFeedback(null) })
+    socket && socket.on('create success', (msg) => { setFeedback(null) })
+    socket && socket.on('entered pool', () => { setFeedback(null) })
 
-    socket?.on('join success', (msg) => { 
+    socket && socket.on('join success', (msg) => { 
       setFeedback(msg)
       navigate('/room', { replace: true })
     })
 
-  }, [socket])
+  }, [navigate, socket])
 
   const onSubmit = async (values) => {
 

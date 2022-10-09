@@ -1,5 +1,5 @@
 import styles from './Navbar.module.css'
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
@@ -12,7 +12,7 @@ function Navbar() {
         <Link to='#' className={styles.Link}> <h1> About </h1> </Link> { /* wip */ }
         <Link to='#' className={styles.Link}> <h1> Logout </h1> </Link> { /* wip */ }
         <Link to='#' className={styles.ImageLink}>
-            <img src='/svgs/cogwheel.svg'></img>
+            <img src='/svgs/cogwheel.svg' alt="cogwheel"></img>
         </Link> 
         </div>
         

@@ -79,9 +79,11 @@ input:-webkit-autofill:active {
 }
 
 .form > button {
+    font-family: 'Courier New', Courier, monospace;
     margin-bottom: 15px;
     background-color: #020100;
     font-size: 18px;
+    border-radius: 16px;
 
     color: #fcf9f5;
     text-shadow: 0.05em 0.05em 0.2em #2f2f2f;

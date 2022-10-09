@@ -8,7 +8,7 @@ function Login() {
   return (
     <main className={styles.Login} style={{ backgroundColor: '#020100', }}>
 
-      <img className={styles.Logo} src="/images/panda.png" />
+      <img className={styles.Logo} src="/images/panda.png" alt="panda" />
 
       <h1 className={styles.Title}> Welcome to PandaGum!</h1>
 
