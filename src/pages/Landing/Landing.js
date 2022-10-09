@@ -4,6 +4,7 @@ import './Landing.css'
 
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
+import { Link } from 'react-router-dom'
 
 function Landing() {
 
@@ -76,7 +77,15 @@ function Landing() {
                   <li><i className="ri-thumb-up-fill"></i> Immediate Chat feature to share your thoughts with participants.</li>
                   <li><i className="ri-thumb-up-fill"></i> Result can be stored in members' account for future reviews.</li>
                 </ul>
-                <a href="./pages/login.html" className="btn-learn-more">Try it now</a>
+
+                { /* React REVISION (Ryan): React is usually used for single page web
+                     apps, when we're linking routes and want to maintain React structure
+                      we must use a package call react-router to handle it for us,
+                      all possible routes exist in the BrowserRouter (index.js),
+                      with the associated element rendered for each route.
+                    But instead of a tags, use the react-router component "Link"
+                */}
+                <Link to='/login' className='btn-learn-more'>Try it now</Link>
 
               </div>
             </div>

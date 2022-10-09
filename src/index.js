@@ -31,7 +31,7 @@ root.render(
       <Routes>
 
 
-        {/* <Route path="/" element={<Landing />} /> */}
+        <Route path="/" element={<Landing />} />
         { /* 
           <Route path="/" element={<Landing />}>
           TO TEST YOUR FRONTEND BUILD 
@@ -41,7 +41,7 @@ root.render(
         */ }
 
         { /* public routes */}
-        <Route path="/login" element={<Login />} />
+        {/* <Route path="/login" element={<Login />} />
         
         <Route element={<RequireAuth />}>
 
@@ -52,7 +52,7 @@ root.render(
               <Route path="/room" element={<Room />} />
             </Route>
           
-        </Route>
+        </Route> */}
 
       </Routes>
     </BrowserRouter>
