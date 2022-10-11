@@ -5,8 +5,8 @@ import './Landing.css'
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 import { Link } from 'react-router-dom'
-
 import Header from '../../comp/Header/Header';
+import useAuth from '../../hooks/useAuth';
 
 function Landing() {
 
@@ -69,8 +69,18 @@ function Landing() {
                       with the associated element rendered for each route.
                     But instead of a tags, use the react-router component "Link"
                 */}
-                <Link to='/login' className='btn-learn-more'>Try it now</Link>
 
+                {/* ADDITION (Ryan): RequireAuth already handles
+                    login requirements and directs the client to login
+                    route when not authenticated. 
+
+                    Rather than link directly to login, link to app,
+                    and let RequireAuth redirect when necessary
+                  */
+                }
+                <Link to='/app' className='btn-learn-more'>Try it now</Link>
+
+                
               </div>
             </div>
 
