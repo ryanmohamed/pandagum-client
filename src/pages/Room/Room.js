@@ -39,7 +39,12 @@ function Room() {
 
   return (
     <>
-    <Header /> 
+    {/* 
+      We dont really want a navbar on this page because of edge cases,
+      think of blooket theres really no interface to get back to the
+      "home page" this is more app than website
+    */}
+    
     <main className={styles.Room}>
 
       {

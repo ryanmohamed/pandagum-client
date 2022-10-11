@@ -13,7 +13,7 @@ function Header() {
         <header id="header" className="fixed-top">
             <div className="container d-flex align-items-center justify-content-between">
 
-                <h1 className="logo"><Link to="/app" replace="true">PetMacher</Link></h1>
+                <h1 className="logo"><Link to="/" replace="true">PetMacher</Link></h1>
 
 
                 <nav id="navbar" className="navbar">
@@ -29,7 +29,6 @@ function Header() {
                                 <Link className="nav-link scrollto" to="/login" replace="true">Login</Link>
                             }
                             
-                        
                         </li>
 
 
