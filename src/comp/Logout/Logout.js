@@ -1,20 +1,28 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import axios from "axios";
 import useAuth from "../../hooks/useAuth";
+import { useNavigate } from "react-router-dom";
 
 function Logout(){
 
-    const { auth } = useAuth()
+    const { auth, setAuth } = useAuth()
+    const navigate = useNavigate()
 
     const signout = async () => {
 
-        const body = auth
-
-        await axios.delete('http://localhost:4001/auth/logout', auth, {
-            headers: { 'Content-Type': 'application/json' },
-            withCredentials: true
+        await axios.delete('http://localhost:4001/auth/logout', { 
+            data: {email: auth?.email} 
         })
+        .then(res => {
+            console.log(res)
+            setAuth({})
+            navigate('/')
+        })
+        .catch(err => {
+            console.log(err);
+        })
+        
     }
 
     return (
