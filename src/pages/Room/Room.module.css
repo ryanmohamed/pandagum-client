@@ -1,10 +1,9 @@
 .Room {
-    background-color: red;
-    margin-top: 98.5px;
+    background-color: #ffffff;
+    min-height: 100vh;
 }
 
-@media only screen and (max-width: 992px) {
-    .Room {
-        margin-top: 84px;
-    }
+#Information{
+    background-color: red;
+    color: blue;
 }
