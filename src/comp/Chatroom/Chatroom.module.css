@@ -1,0 +1,48 @@
+#Chatroom {
+    width: 100%;
+    padding: 25px;
+    background-color: blue;
+} 
+
+#Field {
+    height: 100%;
+    width: 100%;
+    background-color: green;
+    position: relative;
+}
+
+#Input {
+    background-color: yellow;
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#Input > * {
+    margin: 10px;
+}
+
+#Input > textarea {
+    font-family: "Kanit";
+    border-radius: 8px;
+    width: 100%;
+    padding: 10px;
+
+    resize: vertical;
+    height: 50px;
+    min-height: 50px;
+    max-height: 200px;
+}
+
+#Input > button {
+    font-family: "Kanit";
+    border-radius: 8px;
+    background-color: rgb(28, 205, 28);
+    color: white;
+    height: 50px;
+}

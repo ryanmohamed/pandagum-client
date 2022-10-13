@@ -4,6 +4,8 @@ import useAuth from '../../hooks/useAuth'
 import useRoom from '../../hooks/useRoom';
 import styles from './Room.module.css';
 import RoomPanel from '../../comp/RoomPanel/RoomPanel';
+import MatchPanel from '../../comp/MatchPanel/MatchPanel';
+import Chatroom from '../../comp/Chatroom/Chatroom';
 
 function Room() {
   return (
@@ -15,7 +17,9 @@ function Room() {
       "home page" this is more app than website
     */}
 
-      <RoomPanel /> 
+      <RoomPanel className={styles.RoomPanel}/> 
+      <MatchPanel />
+      <Chatroom />
 
     </main>
   );

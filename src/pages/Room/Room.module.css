@@ -1,9 +1,35 @@
 .Room {
     background-color: #ffffff;
     min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(10, 1fr);
 }
 
-#Information{
-    background-color: red;
-    color: blue;
+.Room > *:nth-child(1){
+    grid-column: 1/6;
+    grid-row: 1/2;
+}
+
+.Room > *:nth-child(2){
+    grid-column: 1/4;
+    grid-row: 2/11;
+}
+
+.Room > *:nth-child(3){
+    grid-column: 4/6;
+    grid-row: 2/11;
+}
+
+@media only screen and (max-width: 992px) {
+    .Room > *:nth-child(2){
+        grid-column: 1/6;
+        grid-row: 2/8;
+    }
+    
+    .Room > *:nth-child(3){
+        grid-column: 1/6;
+        grid-row: 8/11;
+    }
 }
