@@ -110,9 +110,15 @@
 #Input > button {
     font-family: "Kanit";
     border-radius: 8px;
-    background-color: #f83357;
+    background: #f83357;
     color: white;
     height: 50px;
+    transition: 250ms;
+}
+
+#Input > button:hover {
+    background: #ed5672;
+    font-size: 150%;
 }
 
 
