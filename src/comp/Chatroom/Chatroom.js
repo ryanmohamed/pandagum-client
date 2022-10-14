@@ -3,45 +3,74 @@ import styles from "./Chatroom.module.css"
 
 import { Formik, Field, Form } from 'formik'
 import useSocketContext from "../../hooks/useSocketContext"
+import ScrollToBottom, { useScrollToBottom } from 'react-scroll-to-bottom';
+
 
 function Chatroom() {
 
     const { socket } = useSocketContext()
     const [ roomId, setRoomId ] = useState(null)
+    const [ messages, setMessages ] = useState([])
     const inputRef = useRef(null)
-    const messages = []
+    const bottomRef = useRef(null)
+
+    const addMessage = (msg, type) => {
+        const tmp = [...messages]
+        tmp.push({ message: msg, type: type})
+        setMessages(tmp)
+    }
 
     useEffect(() => {
         socket && socket.emit('get room id')
         socket && socket.on('room id', (id) => {
             setRoomId(id)
         })
-        socket && socket.on('chat-msg', msg => {
-            console.log(msg)
-            messages.push(msg)
-        })
     }, [])
+
+    useEffect(() => {
+        socket && socket.on('chat-msg', msg => {
+            addMessage(msg, 'recieved')
+        })
+    }, [socket, messages])
+
+    useEffect(() => {
+        bottomRef.current?.scrollIntoView({behavior: 'smooth'})
+    }, [messages])
 
     const sendMsg = (values) => {
         const { msg } = values
         if(roomId && socket) {
+
+            addMessage(msg, 'sent')
+
             socket.emit('message', {
                 roomId: roomId,
                 message: msg
             })
+
         }
         inputRef.current.value = ''
+        values.msg = ''
     }
 
     return (
         <div id={styles["Chatroom"]}>
             <div id={styles["Field"]}>
-
+                
+                <div id={styles["Messages"]}>
                 {
-                    messages.map( (val, key) => {
-                        return <p>{val}</p>
-                    })
+                    messages.map( (val, key) => (
+                        <div 
+                            className={styles.Msg}
+                            id={styles[val?.type]}
+                            key={key}
+                        >
+                            {val?.message}
+                        </div>
+                    ))
                 }
+                <div ref={bottomRef} />
+                </div>
 
                 <Formik
                     initialValues={{ msg: '' }}
