@@ -54,6 +54,8 @@
     padding: 10px;
     border-radius: 20px;
     margin-bottom: 20px;
+    max-width: 60%;
+    word-wrap: break-word;
 }
 
 #sent {
