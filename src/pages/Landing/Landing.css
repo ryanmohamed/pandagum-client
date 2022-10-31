@@ -1,0 +1,10 @@
+.contact .php-email-form button[type=submit] {
+    padding: 0px 20px;
+}
+
+
+.googleMap {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 250px;
+}

@@ -1,0 +1,19 @@
+.fixed_scroll {
+    position: fixed;
+    background: crimson;
+    width: 100%;
+}
+
+.fixed_top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+#header {
+    padding: 10px 0;
+}
