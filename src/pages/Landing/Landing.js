@@ -7,6 +7,14 @@ import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom'
 import Header from '../../comp/Header/Header';
 import useAuth from '../../hooks/useAuth';
+<<<<<<< HEAD
+=======
+import './Landing.css'
+
+import qclogo from './Queens college logo.jpeg'
+
+import GoogleMap from './GoogleMap' 
+>>>>>>> Gene
 
 function Landing() {
 
@@ -158,17 +166,29 @@ function Landing() {
             <div className="section-title">
               <h2>Contact & Feedback</h2>
               <h3>Your Feedback is important to <span>Us</span></h3>
+<<<<<<< HEAD
             </div>
 
             {/* <div>
           <iframe width="100%" height="270px" style="border:0" loading="lazy" allowFullScreen src="https://www.google.com/maps/embed/v1/view?zoom=14&center=40.7367%2C-73.8203&key=AIzaSyD8P0CfxHZyYlWm1WdP6qUSNvILHG6Hp2s"></iframe>
         </div> */}
 
+=======
+              <div className='googleMap'>
+                <GoogleMap/>
+              </div>
+            </div>
+            
+>>>>>>> Gene
             <div className="row mt-5">
 
               <div className="col-lg-4">
                 <div className="info">
+<<<<<<< HEAD
                   <img width="70%" src="assets/img/Queens college logo.jpeg" className="img-fluid" alt="" />
+=======
+                  <img width="100%" src={qclogo} className="img-fluid" alt="" />
+>>>>>>> Gene
                 </div>
               </div>
 
