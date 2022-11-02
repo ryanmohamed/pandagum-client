@@ -30,12 +30,12 @@ First, the server receives those keywords and uses AI to generate images and sen
 
 ### TO-DO
 - Front-end:
-  - 1. chatroom page.
-  - 2. Questionnaire page.
+  - 1. chatroom page: Where the two users can message each other (HTML, Node js and socket.io).
+  - 2. Questionnaire page: Where the questions will be displayed for user to answer (Node js and socket.io).
   - 3. Pet-displaying page.
 - Back-end:
-  - 1. real time chatroom.
-  - 2. AI pet helper
+  - 1. real time chatroom (this feature will be only available for 60 seconds after the two users start answering the questions).
+  - 2. AI pet helper (to detect the pet match for the user)
 
 
 ### Development log
@@ -56,14 +56,14 @@ First, the server receives those keywords and uses AI to generate images and sen
 </p>
 
 #### 100422 Meeting
-- Topic: More details, ryan&parabjot displys chatroom functions, Gene displays homepage. 
+- Topic: More details, ryan&parabjot displays chatroom functions, Gene displays homepage. 
   - [Front-end page display](https://recordit.co/6HyhG17xwj)
   - [chatroom functions display](https://recordit.co/CTO62VWJTc)
 
 #### 102022 Meeting
 - Topic: Incorporate Front-end codes into React structure. selection pool. set up Questionnaire. 
   - [Front-end page display after apply React structure](http://g.recordit.co/5k5YDpC5rK.gif)
-  - Questionnaire Related Code in React
+  - Questionnaire Related Code in Node js: 15 MCQ questions, the user will only be given 10 random ones, the image below shows the code that displays the first question, something to notice is the port number 3000 (relating it to class), the server communciates or sends a reponse to the client/browser through port number 3000. We learned the application layer of the internet has processes, each processes has a port number asscociated with, using the port number and the IP addresses of the sender and receiver, messages (application layer packets) will be sent to the proper socket.    
 <p align="left">
 <img src="https://github.com/ryanmohamed/pandagum-client/blob/main/dev%20log/questionarie.jpeg?raw=true", width="50%">
 </p>
