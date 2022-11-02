@@ -33,7 +33,7 @@ First, the server receives those keywords and uses AI to generate images and sen
 #### b. Index of Meetings
 - [09/26/22 Meeting](#092622-Meeting)
 - [10/04/22 Meeting](#100422-Meeting)
-- [10/12/22 Meeting](#101222-Meeting)
+- [10/20/22 Meeting](#102022-Meeting)
 
 #### c. Dissussions
 #### 092622 Meeting
@@ -50,8 +50,9 @@ First, the server receives those keywords and uses AI to generate images and sen
 #### 102022 Meeting
 - Topic: Incorporate Front-end codes into React structure. selection pool. set up Questionnaire. 
   - [Front-end page display after apply React structure](http://g.recordit.co/5k5YDpC5rK.gif)
-<p align="left">
+
 <strong>Questionnaire Related Code in React </strong>
+<p align="left">
 <img src="https://github.com/ryanmohamed/pandagum-client/blob/main/dev%20log/questionarie.jpeg?raw=true", width="50%">
 </p>
 
