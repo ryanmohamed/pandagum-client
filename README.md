@@ -66,8 +66,6 @@ First, the server receives those keywords and uses AI to generate images and sen
   - Questionnaire Related Code in Node js: 15 MCQ questions, the user will only be given 10 random ones, the image below shows the code that displays the first question, something to notice is the port number 3000 (relating it to class), the server communciates or sends a reponse to the client/browser through port number 3000. We learned the application layer of the internet has processes, each process has a port number asscociated with, using the port number and the IP addresses of the sender and receiver, messages (application layer packets) will be sent to the proper socket.    
 <p align="left">
 <img src="https://github.com/ryanmohamed/pandagum-client/blob/main/dev%20log/questionarie.jpeg?raw=true", width="50%">
-</p>
-
-<p align="right">
 <img src="https://github.com/ryanmohamed/pandagum-client/blob/main/dev%20log/One%20Random%20Question%20Displayed.png", width="50%">
 </p>
+
