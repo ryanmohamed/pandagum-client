@@ -47,5 +47,11 @@ First, the server receives those keywords and uses AI to generate images and sen
   - [Front-end page display](https://recordit.co/6HyhG17xwj)
   - [chatroom functions display](https://recordit.co/CTO62VWJTc)
 
-#### 101222 Meeting
-- Topic: TBD. 
+#### 102022 Meeting
+- Topic: Incorporate Front-end codes into React structure. selection pool. set up Questionnaire. 
+  - [Front-end page display after apply React structure](http://g.recordit.co/5k5YDpC5rK.gif)
+<p align="left">
+<strong>Questionnaire Related Code in React </strong>
+<img src="https://github.com/ryanmohamed/pandagum-client/blob/main/dev%20log/questionarie.jpeg?raw=true", width="50%">
+</p>
+
