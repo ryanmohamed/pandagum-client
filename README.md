@@ -26,7 +26,7 @@ First, the server receives those keywords and uses AI to generate images and sen
 </p>
 
 ### User Story
-- 
+- User can save their perfect pet picture after AI displays the picture. 
 
 ### TO-DO
 - Front-end:
