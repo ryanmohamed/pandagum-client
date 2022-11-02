@@ -25,6 +25,16 @@ Still connected, The two users can now simultaneously produce filter events like
 First, the server receives those keywords and uses AI to generate images and send them back to the users. To get a final pet that is generated for them.
 </p>
 
+### TO-DO
+- Front-end:
+  - 1. chatroom page.
+  - 2. Questionnaire page.
+  - 3. Pet-displaying page.
+- Back-end:
+  - 1. real time chatroom.
+  - 2. AI pet helper
+
+
 ### Development log
 #### a. Dev Tool: 
 - [Figma](https://www.figma.com/file/rLMptvCx0YtM4eBay3rlOd/Pet-Macher?node-id=0%3A1)
