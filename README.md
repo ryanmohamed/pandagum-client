@@ -68,3 +68,6 @@ First, the server receives those keywords and uses AI to generate images and sen
 <img src="https://github.com/ryanmohamed/pandagum-client/blob/main/dev%20log/questionarie.jpeg?raw=true", width="50%">
 </p>
 
+<p align="right">
+<img src="https://github.com/ryanmohamed/pandagum-client/blob/main/dev%20log/One%20Random%20Question%20Displayed.png", width="50%">
+</p>
