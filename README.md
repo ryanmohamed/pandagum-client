@@ -50,7 +50,7 @@ First, the server receives those keywords and uses AI to generate images and sen
 #### 102022 Meeting
 - Topic: Incorporate Front-end codes into React structure. selection pool. set up Questionnaire. 
   - [Front-end page display after apply React structure](http://g.recordit.co/5k5YDpC5rK.gif)
-  - Questionnaire Related Code in Reac
+  - Questionnaire Related Code in React
 <p align="left">
 <img src="https://github.com/ryanmohamed/pandagum-client/blob/main/dev%20log/questionarie.jpeg?raw=true", width="50%">
 </p>
