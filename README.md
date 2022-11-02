@@ -63,7 +63,7 @@ First, the server receives those keywords and uses AI to generate images and sen
 #### 102022 Meeting
 - Topic: Incorporate Front-end codes into React structure. selection pool. set up Questionnaire. 
   - [Front-end page display after apply React structure](http://g.recordit.co/5k5YDpC5rK.gif)
-  - Questionnaire Related Code in Node js: 15 MCQ questions, the user will only be given 10 random ones, the image below shows the code that displays the first question, something to notice is the port number 3000 (relating it to class), the server communciates or sends a reponse to the client/browser through port number 3000. We learned the application layer of the internet has processes, each processes has a port number asscociated with, using the port number and the IP addresses of the sender and receiver, messages (application layer packets) will be sent to the proper socket.    
+  - Questionnaire Related Code in Node js: 15 MCQ questions, the user will only be given 10 random ones, the image below shows the code that displays the first question, something to notice is the port number 3000 (relating it to class), the server communciates or sends a reponse to the client/browser through port number 3000. We learned the application layer of the internet has processes, each process has a port number asscociated with, using the port number and the IP addresses of the sender and receiver, messages (application layer packets) will be sent to the proper socket.    
 <p align="left">
 <img src="https://github.com/ryanmohamed/pandagum-client/blob/main/dev%20log/questionarie.jpeg?raw=true", width="50%">
 </p>
