@@ -9,8 +9,9 @@ import useAuth from "../../hooks/useAuth";
 
 import { useNavigate } from 'react-router-dom'
 
-function LoginForm() {
 
+function LoginForm() {
+  
   const { setAuth } = useAuth()
   const [errMsg, setErrMsg] = useState('')
 
@@ -59,7 +60,7 @@ function LoginForm() {
 
         <Form className={styles.form} id={styles['LoginForm']}>
 
-          <h1 className={styles.Title}> Log in here </h1>
+          <h1 className={styles.Title}>Sign In</h1>
 
           <Field name="email" type="email" placeholder="Email" />
           <ErrorMessage component={"span"} name="email" />

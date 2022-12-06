@@ -1,26 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
 .Title {
-    width: 100%;
     text-align: center;
-
-    margin: 20px 0;
-    font-size: 40px;
-    font-family: 'Caveat', cursive;
-
-    
-    color: #fcf9f5;
-    text-shadow: 0.05em 0.05em 0.2em #2f2f2f;
+    margin-bottom: 1em;
+    font-size: 24px;
+    color: rgb(34, 34, 34);
+    font-weight: 800;
 }
 
 .form {
+
     position: relative;
     padding: 20px;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    align-items: center;
     min-height: 40vh;
     width: 400px;
 
@@ -35,21 +31,28 @@
 }
 
 #LoginForm {
-    background: #FFBC0A;
-    border-top-left-radius: 16px;
-    border-bottom-left-radius: 16px;
+    width: 300px;
+    box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-radius: 8px;
+    background-color: white;
+    opacity: 0.9;
 }
 
 #SignUpForm {
-    background: #FC2F00;
-    border-top-right-radius: 16px;
-    border-bottom-right-radius: 16px;
+    width: 300px;
+    box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-radius: 8px;
+    background-color: white;
+    opacity: 0.9;
 }
 
 .form > input, button {
     font-family: 'Courier New', Courier, monospace;
     font-weight: 600;
-    line-height: 32px;
 
     height: 40px;
     border-radius: 16px;
@@ -132,14 +135,25 @@ input:-webkit-autofill:active {
         min-height: 25vh;
     }
     #LoginForm {
-        border-top-left-radius: 16px;
-        border-top-right-radius: 16px;
-        border-bottom-left-radius: 0;
+        width: 300px;
+        box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        border-radius: 8px;
+        background-color: white;
+        opacity: 0.9;
     }
     
     #SignUpForm {
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 16px;
-        border-bottom-left-radius: 16px;
+        width: 300px;
+        box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        border-radius: 8px;
+        background-color: white;
+        opacity: 0.9;
     }
+
+
+
 }
