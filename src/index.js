@@ -18,6 +18,9 @@ import RequireSocket from './comp/RequireSocket/RequireSocket';
 import { RoomProvider } from './context/RoomProvider';
 
 import Landing from './pages/Landing/Landing';
+import { BrowserRouter as Router} from 'react-router-dom';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -62,7 +62,7 @@ function SignUpForm() {
 
             <Form className={styles.form} id={styles['SignUpForm']}>
 
-              <h1 className={ styles.Title}> Sign up here </h1>
+              <h1 className={ styles.Title}> Sign up</h1>
 
                 <Field name="username" type="text" placeholder="Username" />
                 <ErrorMessage component={"span"} name="username"/>
@@ -76,6 +76,7 @@ function SignUpForm() {
                 { errMsg && <p className={styles.Error}>{ errMsg }</p>}
 
                 <button type="submit">Submit</button>
+                
 
             </Form>
 

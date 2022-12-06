@@ -39,24 +39,27 @@ function Header() {
 
 
                 <nav id="navbar" className="navbar">
-                    <ul>
+                    <ul class="menu">
                         {/* (ryan) - preventative measures */}
-                        <li>{onLanding && <a className="nav-link scrollto active" href="#hero">Home</a>}</li>
-                        <li>{onLanding && <a className="nav-link scrollto" href="#team">Team</a>}</li>
-                        <li>{onLanding && <a className="nav-link scrollto" href="#contact">Contact</a>}</li>
+                        <li>{onLanding && <a className="menu-btn nav-link scrollto active" href="#hero">Home</a>}</li>
+                        <li>{onLanding && <a className="menu-btn nav-link scrollto" href="#team">Team</a>}</li>
+                        <li>{onLanding && <a className="menu-btn nav-link scrollto" href="#contact">Contact</a>}</li>
                         
                         
                         <li>
 
                             { auth?.accessToken ? <Logout /> :
-                                <Link className="nav-link scrollto" to="/login" replace="true">Login</Link>
+                                <Link className="menu-btn nav-link scrollto" to="/login" replace="true">Login</Link>
                             }
                             
                         </li>
 
 
                     </ul>
-                    <i className="bi bi-list mobile-nav-toggle"></i>
+                    <div class="menu-btn">
+                        <i className="menu-btn bi bi-list mobile-nav-toggle"></i>
+                    </div>
+                    
                 </nav>
 
             </div>
