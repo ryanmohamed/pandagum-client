@@ -15,6 +15,8 @@ import useRoom from './hooks/useRoom';
 
 import Header from './comp/Header/Header'
 
+import { HistoryRouterProps } from 'react-router-dom'
+
 function App() {
 
   const { auth } = useAuth()
@@ -23,6 +25,7 @@ function App() {
 
   useEffect(() => {
     let s = getSocket(auth)
+    
     s.on('msg', msg => {
       console.log(msg)
     })
@@ -33,6 +36,7 @@ function App() {
     })
 
     setSocket(s)
+
   }, [auth, setSocket, setRoom])
 
   return (

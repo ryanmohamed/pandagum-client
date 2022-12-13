@@ -1,6 +1,6 @@
 .Room {
     background-color: #ffffff;
-    min-height: 100vh;
+    max-height: 150vh;
 
     display: grid;
     grid-template-columns: repeat(5, 1fr);

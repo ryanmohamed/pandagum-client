@@ -18,8 +18,9 @@ function LoginForm() {
 
   const onSubmit = async (values) => {
 
-    await axios.post('http://localhost:4001/auth/login', values, {
-      headers: { 'Content-Type': 'application/json' },
+    await axios.post('https://petmatcher-server-auth-v1.herokuapp.com/auth/login', values, {
+      headers: { 'Content-Type': 'application/json'
+      },
       withCredentials: true
     })
       .then(res => {
@@ -39,7 +40,10 @@ function LoginForm() {
         const status = err?.response?.status
         if(status === 404) setErrMsg('User not found! ❌')
         else if(status === 403) setErrMsg('Incorrect password! 🤔')
-        else setErrMsg('Login failed! Not too sure...')
+        else{
+          setErrMsg('Login failed! Not too sure...')
+          console.log(status, err?.response);
+        } 
 
       })
 

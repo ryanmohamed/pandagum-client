@@ -6,12 +6,13 @@ export const getSocket = (auth) => {
     const token = auth?.accessToken
 
     if(token) {
-        return io.connect('http://localhost:4000/', {
-            auth: auth
+        return io.connect('https://petmatcher-server-socket-v1.herokuapp.com', {
+            auth: auth,
+            withCredentials: true
         })
     }
     
-    return io.connect('http://localhost:4000/')
+    return io.connect('https://petmatcher-server-socket-v1.herokuapp.com')
 }
 
 export const SocketContext  = createContext({})

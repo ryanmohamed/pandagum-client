@@ -1,5 +1,46 @@
 #MatchPanel {
     width: 100%;
-
-    background-color: red;
+    max-height: 100%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
 }
+
+#MatchPanel > img {
+    max-height: 100%;
+    width: auto;
+    font-size: 30px;
+    font-family: "Kanit";
+}
+
+#MatchPanel > h1 {
+    font-size: 30px;
+    font-family: "Kanit";
+}
+
+#MatchPanel > img > a{
+    display: block;
+}
+
+#Popup {
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#Popup > div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#Popup > div > button {
+    margin: 0;
+}
+

@@ -1,0 +1,127 @@
+#Question {
+}
+
+#Question > h4 {
+    font-size: 30px;
+    text-align: right;
+    font-family: "Kanit";
+    color: #f6f6f6;
+    text-shadow: 1px 3px 4px rgba(89, 127, 160, 0.5);
+    margin-bottom: 50px;
+    animation: flash 2s infinite;
+    background-color: #212529;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: rgb(38, 57, 77) 0px 10px 20px -20px;
+}
+
+@keyframes flash {
+    0% {  text-shadow: 1px 2px 3px #ff6d8f6f; }
+    50% {  text-shadow: -1px 2px 3px #ff6d8f9f; }
+    100% {  text-shadow: 1px 2px 3px #ff6d8f6f; }
+}
+
+#TextField {
+    width: 100%;
+    min-height: 5vh;
+    height: 150px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+
+    text-align: center;
+    font-size: 30px;
+    font-family: "Kanit";
+    box-shadow: rgb(29, 43, 57) 0px 10px 20px -20px;
+    border: none;
+    background-color: #212529;
+    color: white;
+}
+
+
+.Choice {
+    background-color: #fff5b7;
+    min-height: 50px;
+    margin: 0 15px 20px 15px;
+    padding: 0 20px;
+    border-radius: 16px;
+    box-shadow: rgb(38, 57, 77) 0px 10px 20px -20px;
+
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    transition: 200ms;
+}
+
+.Choice:hover {
+    scale: 1.1;
+}
+
+.Choice > input[type="radio"] {
+    /* ...existing styles */
+    display: grid;
+    place-content: center;
+
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: #ff6d8f;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid #ff6d8f;
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+
+    cursor: pointer;
+}
+  
+.Choice > input[type="radio"]::before {
+    content: "";
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms ease-in;
+    box-shadow: inset 1em 1em #6fdea6;
+}
+  
+.Choice > input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+
+.Choice > input[type="radio"]:focus {
+    outline: max(2px, 0.15em) solid #ff6d8f;
+    outline-offset: max(2px, 0.15em);
+}
+
+.Choice > input[type="radio"]:disabled {
+    border: 0.15em solid #f8f8f8;
+    box-shadow: inset 1em 1em #212529;
+    cursor:auto;
+}
+
+#Button:disabled {
+    background-color:#c2c2c2;
+    color: #212529;
+}
+
+#Button {
+    font-family: 'Kanit';
+    font-size: 30px;
+    background-color:#fb4d6d;
+    color: #ffe70e;
+    height: 60px;
+    width: 100%;
+    margin: 20px 0;
+    transition: 200ms;
+    box-shadow: rgb(38, 57, 77) 0px 10px 20px -20px;
+    border-radius: 8px;
+    border: none;
+}
+
+#Button:hover {
+    scale: 1.05;
+    box-shadow: rgb(38, 57, 77) 0px 10px 30px -10px;
+}

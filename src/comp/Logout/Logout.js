@@ -11,7 +11,7 @@ function Logout(){
 
     const signout = async () => {
 
-        await axios.delete('http://localhost:4001/auth/logout', { 
+        await axios.delete('https://petmatcher-server-auth-v1.herokuapp.com/auth/logout', { 
             data: {email: auth?.email} 
         })
         .then(res => {

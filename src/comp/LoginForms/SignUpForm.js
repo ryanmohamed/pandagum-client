@@ -19,7 +19,7 @@ function SignUpForm() {
 
   const onSubmit = async (values) => {
     
-    await axios.post('http://localhost:4001/auth/signup', values, {
+    await axios.post('https://petmatcher-server-auth-v1.herokuapp.com/auth/signup', values, {
       headers: { 'Content-Type': 'application/json' },
       withCredentials: true
     })

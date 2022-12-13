@@ -28,6 +28,10 @@ function RoomPanel(){
     
     useEffect(() => { setReady(room?.ready)}, [ room ])
 
+    useEffect(() => {
+      // begin match
+    }, [ ready ])
+
     return (
         <div id={styles['Information']}>
         {
